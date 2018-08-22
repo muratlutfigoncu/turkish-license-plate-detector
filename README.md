@@ -1,4 +1,4 @@
-##License Plate Detector
+# License Plate Detector
 
 This repository contains the codes, samples images and tutorial necessary to train a haar cascade using Python and OpenCV to detect turkish and european union license plates. 
 
@@ -64,7 +64,7 @@ In my mac the last step took about 7 hours. (Processor: i5, Memory: 8 GB)
 The output is not great but still works. Will try to rerun training after collecting more images.
 
 
-##Features to be added
+# Features to be added
 
 - Reading license plate number using Tesseract
 - Capturing license plates in videos
