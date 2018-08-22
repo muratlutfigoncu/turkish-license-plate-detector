@@ -61,3 +61,8 @@ In my mac thelast step took about 7 hours. (Processor: i5, Memory: 8 GB)
 
 The output is not great but still works. Will try to rerun training after collecting more images.
 
+
+#Features to be added
+
+- Reading license plate number using Tesseract
+- Capturing license plates in videos
