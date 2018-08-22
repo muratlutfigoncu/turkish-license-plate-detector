@@ -1,4 +1,6 @@
-#License Plate Detector
+##License Plate Detector
+
+This repository contains the codes, samples images and tutorial necessary to train a haar cascade using Python and OpenCV to detect turkish and european union license plates. 
 
 
 1 - Gather pos images put in positive_images folder
@@ -39,7 +41,7 @@ find ./positive_images -iname "*.jpg" > positives.txt
 opencv_createsamples -info info/info.lst -num 4000 -w 52 -h 13 -vec positives.vec
 ```
 
-7 - Let's start training
+7 - Let's start training. Use less pictures in training than created samples: 4000 -> 3800. And also try to keep positive/negative images ratio to 2:1.
 ```bash
 opencv_traincascade -data data -vec positives.vec -bg negatives.txt -numPos 3800 -numNeg 1900 -numStages 10 -w 52 -h 13
 
@@ -47,7 +49,7 @@ opencv_traincascade -data data -vec positives.vec -bg negatives.txt -numPos 3800
 nohup opencv_traincascade -data data -vec positives.vec -bg negatives.txt -numPos 3800 -numNeg 1900 -numStages 10 -w 52 -h 13 &
 ```
 
-In my mac thelast step took about 7 hours. (Processor: i5, Memory: 8 GB)
+In my mac the last step took about 7 hours. (Processor: i5, Memory: 8 GB)
 
 8 - After the training, you will see a cascade file under data. Let's test our trained cascade using test.py. But first change the cascade file path in test.py and then run commnand:
 
@@ -62,7 +64,7 @@ In my mac thelast step took about 7 hours. (Processor: i5, Memory: 8 GB)
 The output is not great but still works. Will try to rerun training after collecting more images.
 
 
-#Features to be added
+##Features to be added
 
 - Reading license plate number using Tesseract
 - Capturing license plates in videos
